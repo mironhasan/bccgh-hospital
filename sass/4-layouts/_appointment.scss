@@ -1,0 +1,74 @@
+.appointment {
+    .form-container {
+        margin-bottom: 60px;
+    }
+}
+
+.appoint-focus {
+    font-size: 60px;
+    line-height: 60px;
+    text-transform: uppercase;
+    position: relative;
+
+    span { 
+        color: $primary;
+        display: block;
+    }
+    
+    small { 
+        font-size: 36px; 
+        margin-top: 5px;
+        padding-bottom: 15px;
+        display: block;
+        text-transform: capitalize;
+    }
+
+    &::before {
+        content: "";
+        @include position(absolute, 50px, 3px, auto);
+        bottom: 0px;
+        #{$start-direction}: 0px;
+        background-color: $primary;
+    }
+}
+
+.appoint-feature {
+    margin-#{$start-direction}: 50px;
+
+    p {
+        margin-bottom: 30px;
+    }
+
+    h3 {
+        @include flex(center, flex-start);
+        gap: 10px;
+        font-weight: 700;
+        font-size: 30px;
+        color: $primary;
+
+        i {
+            font-size: 38px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .appoint-focus {
+        margin-bottom: 20px;
+        font-size: 50px;
+        line-height: 50px; 
+    }
+
+    .appoint-feature {
+        h3 {
+            font-size: 24px;
+
+            i { font-size: 30px; }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .appoint-focus { margin-bottom: 30px; }
+    .appoint-feature { margin-#{$start-direction}: 0px; }
+}

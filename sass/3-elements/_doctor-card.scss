@@ -1,0 +1,87 @@
+.doctor-card {
+    background: $chalk-1;
+
+    &:hover {
+        .doctor-img {
+            &::before {
+                height: 100%;
+            }
+
+            img {
+                transform: scale(1.1);
+            }
+
+            a {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.doctor-img {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        bottom: 0px;
+        #{$start-direction}: 0px;
+        @include position(absolute, 100%, 0%, 1);
+        background: linear-gradient(to top, rgba($primary, .9), rgba($primary, .0));
+        @include transition;
+    }
+
+    img {
+        width: 100%;
+        @include transition;
+    }
+
+    a {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        #{$start-direction}: 50%;
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+        white-space: nowrap;
+        @include font(13px, 600);
+        letter-spacing: 0.7px;
+        padding: 7px 20px;
+        color: $white;
+        background: rgba($primary, .7);
+        border: 2px solid $white;
+        visibility: hidden;
+        opacity: 0;
+        @include transition;
+
+        &:hover {
+            background: $primary;
+            border-color: $primary;
+        }
+    }
+}
+
+.doctor-meta {
+    padding: 25px 25px 28px;
+
+    h4 {
+        @include font(18px, 700);
+        margin-bottom: 10px;
+
+        a {
+            color: $heading;
+            @include transition;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+
+    h5 {
+        @include font(15px, 600);
+        line-height: 20px;
+        color: $primary;
+    }
+}

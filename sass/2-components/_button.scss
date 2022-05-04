@@ -1,0 +1,64 @@
+.btn {
+    @include font(15px, 600);
+    letter-spacing: 0.5px;
+    column-gap: 6px;
+    line-height: 15px;
+    padding: 14px 25px;
+    border-radius: 0px;
+    border: none;
+    white-space: nowrap;
+    text-transform: uppercase;
+
+    &:focus {
+        box-shadow: none !important;
+    }
+
+    i {
+        margin-#{$end-direction}: 5px;
+        vertical-align: middle;
+    }
+
+    span {
+        vertical-align: middle;
+    }
+}
+
+
+.btn-primary {
+    color: $primary;
+    background: $chalk-2;
+    position: relative;
+    z-index: 1;
+    @include transition;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $chalk-2;
+        border-color: transparent;
+    }
+
+    &:focus {
+        color: $primary;
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    &::before {
+        content: "";
+        @include position(absolute, 3px, 100%, -1);
+        top: 0px;
+        #{$start-direction}: 0px;
+        background: $primary;
+        @include transition;
+    }
+
+    &:hover {
+        &::before {
+            width: 100%;
+        }
+    }
+}
+

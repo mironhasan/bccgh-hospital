@@ -1,0 +1,35 @@
+.table-custom {
+    text-align: center;
+    margin-bottom: 0px;
+    min-width: 650px;
+
+    thead {
+        tr {
+            th {
+                @include font(16px, 700);
+                letter-spacing: 0.5px;
+                padding: 12px 8px 10px;
+                text-transform: uppercase;
+                background-color: $chalk-1;
+                color: $heading;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            th { 
+                font-weight: 600;
+                color: $heading;
+             }
+
+            td {
+                padding: 12px 8px;
+            }
+        }
+    }
+}
+
+.table>:not(:first-child) {
+    border-top: none;
+}

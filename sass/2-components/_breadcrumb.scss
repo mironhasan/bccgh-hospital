@@ -1,0 +1,55 @@
+// MC BREADCRUMB 
+.mc-breadcrumb {
+    margin-bottom: 50px;
+    padding: 25px 0px 23px;
+    background: $chalk-1;
+}
+
+.mc-breadcrumb-group {
+    @include flex(center, space-between);
+    gap: 10px;
+}
+
+.mc-breadcrumb-title {
+    @include font(20px, 700);
+    text-transform: uppercase;
+}
+
+.mc-breadcrumb-list {
+    @include flex(center, flex-end);
+    flex-wrap: wrap;
+}
+
+.mc-breadcrumb-item {
+    @include font(16px, 500);
+    color: var(--bs-gray-500); 
+    text-transform: capitalize;
+    white-space: nowrap;
+
+    &::after {
+        content: "/";
+        margin: 0px 10px;
+        color: $text;
+    }
+
+    &:last-child {
+        &::after { display: none; }
+    }
+}
+
+.mc-breadcrumb-link {
+    color: $text;
+    @include transition;
+}
+
+@media (max-width: 767px) {
+    .mc-breadcrumb-group {
+        flex-direction: column;
+        padding: 30px 15px 25px;
+    }
+
+    .mc-breadcrumb-list {
+        justify-content: center;
+    }
+
+}

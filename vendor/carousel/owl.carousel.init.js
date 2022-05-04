@@ -1,1 +1,37 @@
-$(".banner-carousel").owlCarousel({loop:!0,nav:!1,autoplay:!0,autoplayHoverPause:!0,smartSpeed:1e3,autoplayTimeout:6e3,responsive:{0:{items:1}}}),$(".doctor-carousel").owlCarousel({loop:!0,nav:!0,dots:!1,autoplay:!0,autoplayHoverPause:!0,margin:25,smartSpeed:1e3,autoplayTimeout:6e3,responsive:{0:{items:1,nav:!1},576:{items:2},992:{items:3},1200:{items:4}}});
+$('.banner-carousel').owlCarousel({
+    loop: true,
+    nav: false,
+    autoplay: true,
+    autoplayHoverPause: true,
+    smartSpeed: 1000,
+    autoplayTimeout: 6000,
+    responsive:{
+        0:{ items: 1 }
+    }
+});
+
+$('.doctor-carousel').owlCarousel({
+    loop: true,
+    nav: true,
+    dots: false,
+    autoplay: true,
+    autoplayHoverPause: true,
+    margin: 25,
+    smartSpeed: 1000,
+    autoplayTimeout: 6000,
+    responsive:{
+        0:{
+            items:1,
+            nav:false,
+        },
+        576:{
+            items:2,
+        },
+        992:{
+            items:3,
+        },
+        1200:{
+            items:4,
+        }
+    }
+});

@@ -1,0 +1,51 @@
+// =====================================
+//         ALL HELPERS FILE URL
+//======================================
+@import '1-helpers/variable';
+@import '1-helpers/mixin';
+@import '1-helpers/global';
+
+
+// =====================================
+//        ALL COMPONENTS FILE URL
+//======================================
+@import '2-components/form';
+@import '2-components/modal';
+@import '2-components/table';
+@import '2-components/button';
+@import '2-components/section';
+@import '2-components/breadcrumb';
+@import '2-components/pagination';
+@import '2-components/carousel-nav';
+@import '2-components/carousel-dots';
+
+
+// =====================================
+//        ALL ELEMENTS FILE URL
+//======================================
+@import '3-elements/doctor-card';
+
+
+// =====================================
+//        ALL LAYOUTS FILE URL
+//======================================
+@import '4-layouts/header-top';
+@import '4-layouts/header';
+@import '4-layouts/hospitality';
+@import '4-layouts/appointment';
+@import '4-layouts/footer';
+@import '4-layouts/footer-bottom';
+@import '4-layouts/top-filter';
+@import '4-layouts/bottom-paginate';
+
+
+
+// =====================================
+//        ALL PAGES FILE URL
+//======================================
+@import '5-pages/index';
+@import '5-pages/about';
+@import '5-pages/contact';
+@import '5-pages/doctors';
+@import '5-pages/doctors-single';
+
