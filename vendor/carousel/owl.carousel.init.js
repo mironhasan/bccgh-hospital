@@ -1,0 +1,1 @@
+$(".banner-carousel").owlCarousel({loop:!0,nav:!1,autoplay:!0,autoplayHoverPause:!0,smartSpeed:1e3,autoplayTimeout:6e3,responsive:{0:{items:1}}}),$(".doctor-carousel").owlCarousel({loop:!0,nav:!0,dots:!1,autoplay:!0,autoplayHoverPause:!0,margin:25,smartSpeed:1e3,autoplayTimeout:6e3,responsive:{0:{items:1,nav:!1},576:{items:2},992:{items:3},1200:{items:4}}});
